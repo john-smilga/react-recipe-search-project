@@ -7,8 +7,12 @@ import RecipeDetails from "./components/RecipeDetails";
 class App extends Component {
   state = {
     recipes: recipes,
-    url: `https://www.food2fork.com/api/search?key=${process.env.API_KEY}`,
-    base_url: `https://www.food2fork.com/api/search?key=${process.env.API_KEY}`,
+    url: `https://www.food2fork.com/api/search?key=${
+      process.env.REACT_APP_API_KEY
+    }`,
+    base_url: `https://www.food2fork.com/api/search?key=${
+      process.env.REACT_APP_API_KEY
+    }`,
     details_id: 35389,
     pageIndex: 1,
     search: "",
@@ -98,8 +102,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(process.env.API_KEY);
-
     return (
       <React.Fragment>{this.displayPage(this.state.pageIndex)}</React.Fragment>
     );
