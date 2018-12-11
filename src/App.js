@@ -98,7 +98,7 @@ class App extends Component {
   };
 
   render() {
-    console.log(API_KEY);
+    console.log(process.env.API_KEY);
 
     return (
       <React.Fragment>{this.displayPage(this.state.pageIndex)}</React.Fragment>
