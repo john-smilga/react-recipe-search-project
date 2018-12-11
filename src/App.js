@@ -102,6 +102,8 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.url);
+    
     return (
       <React.Fragment>{this.displayPage(this.state.pageIndex)}</React.Fragment>
     );
