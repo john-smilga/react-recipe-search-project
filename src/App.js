@@ -31,7 +31,7 @@ class App extends Component {
         });
       } else {
         this.setState(() => {
-          return { recipes: jsonData.recipes };
+          return { recipes: jsonData.recipes, error: "" };
         });
       }
     } catch (error) {
